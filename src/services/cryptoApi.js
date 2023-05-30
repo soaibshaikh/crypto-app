@@ -1,4 +1,25 @@
 import axios from 'axios';
+import { createApi, fetchBaseQuery }  from '@reduxjs/toolkit/query/react';
+
+const cryptoheaders =   {
+    'X-RapidAPI-Key': '8b433c3fb4mshba8f57cd16c46b4p14317cjsn3ac2cd066941',
+    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+}
+const baseUrl = `https://coinranking1.p.rapidapi.com/`;
+
+const createRequest = (url) => ({url, headers: cryptoheaders});
+
+export const cryptoApi = createApi({
+    reducerPath: 'cryptoApi',
+    baseQuery: fetchBaseQuery({baseUrl}),
+    endpoints: (builder) => ({
+        getCryptos: builder.query({
+            query: () => createRequest('/coins')
+        })
+    })
+})
+
+export const { useGetCryptosQuery} = cryptoApi;
 
 const options = {
   method: 'GET',
@@ -18,9 +39,9 @@ const options = {
   }
 };
 
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
+// try {
+// 	const response = await axios.request(options);
+// 	console.log(response.data);
+// } catch (error) {
+// 	console.error(error);
+// }

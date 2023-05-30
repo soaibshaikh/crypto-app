@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createApi, fetchBaseQuery }  from '@reduxjs/toolkit/query/react';
 
 const cryptoheaders =   {
@@ -21,23 +20,23 @@ export const cryptoApi = createApi({
 
 export const { useGetCryptosQuery} = cryptoApi;
 
-const options = {
-  method: 'GET',
-  url: 'https://coinranking1.p.rapidapi.com/coins',
-  params: {
-    referenceCurrencyUuid: 'yhjMzLPhuIDl',
-    timePeriod: '24h',
-    'tiers[0]': '1',
-    orderBy: 'marketCap',
-    orderDirection: 'desc',
-    limit: '50',
-    offset: '0'
-  },
-  headers: {
-    'X-RapidAPI-Key': '8b433c3fb4mshba8f57cd16c46b4p14317cjsn3ac2cd066941',
-    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-  }
-};
+// const options = {
+//   method: 'GET',
+//   url: 'https://coinranking1.p.rapidapi.com/coins',
+//   params: {
+//     referenceCurrencyUuid: 'yhjMzLPhuIDl',
+//     timePeriod: '24h',
+//     'tiers[0]': '1',
+//     orderBy: 'marketCap',
+//     orderDirection: 'desc',
+//     limit: '50',
+//     offset: '0'
+//   },
+//   headers: {
+//     'X-RapidAPI-Key': '8b433c3fb4mshba8f57cd16c46b4p14317cjsn3ac2cd066941',
+//     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+//   }
+// };
 
 // try {
 // 	const response = await axios.request(options);

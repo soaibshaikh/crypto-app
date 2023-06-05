@@ -87,8 +87,18 @@ Overall, the Crypto App combines the power of React.js, Redux Toolkit, Rapid API
 
 The app includes a Line Chart to display crypto price trends and integrates with a news API to fetch and display crypto-related news.
 
-![Screenshot from 2023-06-05 19-02-32](https://github.com/soaibshaikh/crypto-app/assets/47810926/9d5fb713-68b9-40c8-bd1b-4dbc1bcf1500)
+
+
+
+![Screenshot from 2023-06-05 19-03-41](https://github.com/soaibshaikh/crypto-app/assets/47810926/84311976-bf0d-45bc-91f6-6023108ad87f)
+
+
+
 ![Screenshot from 2023-06-05 19-03-50](https://github.com/soaibshaikh/crypto-app/assets/47810926/56e2a3a6-cc61-4118-9ab7-463ceb138c47)
+
+
+
+
 
 ![Screenshot from 2023-06-05 19-03-41](https://github.com/soaibshaikh/crypto-app/assets/47810926/dd73efd6-c873-41ed-b506-7ac2cc10e4a6)
 

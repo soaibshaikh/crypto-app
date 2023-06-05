@@ -93,7 +93,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:850px){
     .app{
         flex-direction: column;
         overflow: hidden;
@@ -290,6 +290,7 @@ a:hover{
 
 .select-news{
     width: 180px;
+    margin: auto;
 }
 .news-card{
     min-height: 300px !important;

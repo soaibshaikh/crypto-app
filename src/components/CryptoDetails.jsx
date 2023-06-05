@@ -13,10 +13,11 @@ import {
   ThunderboltOutlined,
 } from "@ant-design/icons";
 import millify from "millify";
-import { Col, Row, Typography, Select } from "antd";
+import { Col, Avatar, Row, Typography, Select } from "antd";
 import HTMLReactParser from "html-react-parser";
 
 import Linechart from "./Linechart";
+import Loader from "./Loader";
 
 const { Title, Text } = Typography;
 const Option = Select;
@@ -32,9 +33,11 @@ const CryptoDetails = () => {
   const cryptoDetails = data?.data?.coin;
 
 
-  if(isFetching) return 'Loading....';
+  if(isFetching) return <Loader/>;
 
-  const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
+  // const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
+  const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
+
 
   const stats = [
     {
@@ -102,13 +105,11 @@ const CryptoDetails = () => {
     },
   ];
 
-console.log('coinHistory',coinHistory);
-
-// console.log('cryptoDetails',cryptoDetails);
   return (
     <>
       <Row   gutter={[8,24]} className="coin-detail-container">
         <Col span={24} className="coin-heading-container">
+          <Avatar shape="square" size={64} src={<img src={cryptoDetails?.iconUrl} alt={cryptoDetails?.name}/>} />
           <Title level={2} className="coin-name">
             {cryptoDetails?.name} ({cryptoDetails?.symbol}) Price
           </Title>
@@ -118,25 +119,24 @@ console.log('coinHistory',coinHistory);
             statistics, market cap and supply.{" "}
           </p>
         </Col>
-        <Col span={24}>
+        <Col  style={{ display: 'flex' , justifyContent: 'center' }} span={24}>
           <Select
             defaultValue={"7d"}
             className="select-timeperiod"
             placeholder="Select Time Period"
             onChange={(value) => setTimePeriod(value)}
           >
-            {time.map((date) => (
-              <Option key={date}> {date}</Option>
-            ))}
+            {time.map((date) => <Option key={date}> {date}</Option>
+            )}
           </Select>
         </Col>
 
-        <Col span={24}>
-              <Linechart coinHistory={coinHistory} currentPrice={ millify(+cryptoDetails?.price)} coinName={cryptoDetails?.coinName} />
+        <Col span={22} style={{margin: 'auto'}} >
+              <Linechart coinHistory={coinHistory} currentPrice={ millify(+cryptoDetails?.price)} coinName={cryptoDetails?.name} />
         </Col>
         <Col span={24}>
           <Row justify="space-between" className="stats-container">
-            <Col span={10} className="coin-value-statistics">
+            <Col span={{xs: '12', sm: '10', md: '8'}} className="coin-value-statistics">
               <Col className="coin-value-statistics-heading">
                 <Title level={3} className="coin-details-heading">
                   {cryptoDetails?.name} Value Statistics
@@ -153,7 +153,7 @@ console.log('coinHistory',coinHistory);
                 </Col>
               ))}
             </Col>
-            <Col span={10} className="other-stats-info">
+            <Col span={{xs: '12', sm: '10', md: '8'}} className="other-stats-info">
               <Col className="coin-value-statistics-heading">
                 <Title level={3} className="coin-details-heading">
                   Other Statistics

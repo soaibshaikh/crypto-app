@@ -3,6 +3,7 @@ import  { Select ,Space, Typography, Row, Col, Avatar, Card } from 'antd';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import moment from 'moment';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import Loader from './Loader';
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -12,11 +13,12 @@ const News = ({simplified}) => {
   const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
   const { data } = useGetCryptosQuery(100);
   const {data: cryptoNews, isFetching} = useGetCryptoNewsQuery({newsCategory, count:simplified ? 6 : 12});
-  if(!cryptoNews?.value) return 'Loading......'
+  if(!cryptoNews?.value) return <Loader/>;
+
   return (
     <Row gutter={[24,24]}>
       {!simplified && (
-        <Col span={24} >
+        <Col span={24}  style={{ display: 'flex' , justifyContent: 'center' }} >
           <Select
             showSearch
             className='select-news'

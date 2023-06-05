@@ -1,3 +1,5 @@
+
+#Crytoverse App (Using React js, redux toolkit,Ant Design,Rapid API)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +70,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### cryptoverse app 
+
+The Crypto App project is a React.js application built using Redux Toolkit, Rapid API, and Ant Design. It aims to provide users with real-time information and analysis of various cryptocurrencies. The application utilizes Redux Toolkit, a powerful state management library, to efficiently manage the application's state and handle asynchronous actions.
+
+By integrating with Rapid API, the Crypto App accesses reliable and up-to-date data on cryptocurrency prices, market trends, and other related information. This allows users to stay informed about the latest developments and make well-informed investment decisions. The app leverages the extensive range of endpoints provided by Rapid API to fetch data such as historical price charts, market summaries,cryptocurrency related news and individual coin details.
+
+To enhance the user experience and ensure a visually appealing interface, the project utilizes Ant Design, a popular React UI component library. With Ant Design, the Crypto App achieves a consistent and responsive design across different devices and screen sizes.
+
+The Crypto App offers a range of features, including the ability to view real-time cryptocurrency prices, track portfolios,  and access comprehensive market analysis tools. Users can easily search and filter cryptocurrencies, view detailed coin information, and monitor their investments in a user-friendly dashboard.
+
+Overall, the Crypto App combines the power of React.js, Redux Toolkit, Rapid API, and Ant Design to deliver a feature-rich and user-friendly platform for crypto enthusiasts and investors. It provides a seamless experience for tracking cryptocurrency market trends, making informed decisions, and staying up-to-date with the ever-changing world of cryptocurrencies.
+
+The app includes a Line Chart to display crypto price trends and integrates with a news API to fetch and display crypto-related news.
+
+![Screenshot from 2023-06-05 19-02-32](https://github.com/soaibshaikh/crypto-app/assets/47810926/9d5fb713-68b9-40c8-bd1b-4dbc1bcf1500)
+![Screenshot from 2023-06-05 19-03-50](https://github.com/soaibshaikh/crypto-app/assets/47810926/56e2a3a6-cc61-4118-9ab7-463ceb138c47)
+
+![Screenshot from 2023-06-05 19-03-41](https://github.com/soaibshaikh/crypto-app/assets/47810926/dd73efd6-c873-41ed-b506-7ac2cc10e4a6)
+
+
+
+
